@@ -1,0 +1,3 @@
+select {owner}, {streetname},{postalcode},{town}, COUNT({owner}) from {Address} where {market} IN ('8796093088808') AND ({creationtime} >= '2025-04-01 00:00:19' OR {modifiedtime} >= '2025-04-01 00:00:19')
+GROUP BY {owner}, {streetname}, {postalcode},{town}
+HAVING count({owner})>1
